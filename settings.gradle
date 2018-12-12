@@ -1,2 +1,4 @@
 rootProject.name = 'com.david.zookeeper'
+include 'com.david.zkrmiserver'
+include 'com.david.zkrmiclient'
 
