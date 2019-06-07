@@ -60,7 +60,7 @@ public class DistributedLock implements Lock,Watcher {
                 sortedSet.add(ROOT_LOCK+"/"+children);
             }
             String firstNode=sortedSet.first(); //获得当前所有子节点中最小的节点
-            SortedSet<String> lessThenMe=((TreeSet<String>) sortedSet).headSet(CURRENT_LOCK); //
+            SortedSet<String> lessThenMe=((TreeSet<String>) sortedSet).headSet(CURRENT_LOCK); //返回从开始到指定元素的集合
             if(CURRENT_LOCK.equals(firstNode)){//通过当前的节点和子节点中最小的节点进行比较，如果相等，表示获得锁成功
                 return true;
             }
